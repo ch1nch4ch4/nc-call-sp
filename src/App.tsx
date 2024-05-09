@@ -61,17 +61,17 @@ function App() {
 
   return (
     <Stack
-      style={{ height: "100%", width: "100%", padding: "3rem" }}
+      style={{ height: "100%", width: "100%", paddingTop: "5rem", paddingBottom: "5rem" }}
       tokens={{ childrenGap: "1.5rem" }}
     >
       <Stack tokens={{ childrenGap: "1rem" }} style={{ margin: "auto" }}>
         <Stack
-          style={{ padding: "3rem" }}
+          style={{ padding: "0rem" }}
           horizontal
           tokens={{ childrenGap: "2rem" }}
         >
           <img
-            style={{ width: "30rem", height: "auto" }}
+            style={{ width: "25rem", height: "auto" }}
             src={logo}
             alt="logo"
           />
