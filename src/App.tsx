@@ -81,7 +81,7 @@ function App() {
           Welcome to Netcompany Support
         </Text>
         <Text style={{textAlign: "center"}}>
-          To connect to support immediatly, click the <b>start call</b> button.
+          To connect to support immediatly, click the Call button below.
         </Text>
       </Stack>
       <Stack
