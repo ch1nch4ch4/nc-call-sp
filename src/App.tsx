@@ -23,7 +23,9 @@ function App() {
   /**
    * Token for local user.
    */
+
   const token = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjYwNUVCMzFEMzBBMjBEQkRBNTMxODU2MkM4QTM2RDFCMzIyMkE2MTkiLCJ4NXQiOiJZRjZ6SFRDaURiMmxNWVZpeUtOdEd6SWlwaGsiLCJ0eXAiOiJKV1QifQ.eyJza3lwZWlkIjoiYWNzOmQ4MDBlZDUzLTczZmYtNGMzMi1hNTkyLTI4Y2E0ZWI5Yjc1OF8wMDAwMDAyMC0zNjQxLTgyMGUtNDlhMS00NzNhMGQwMDBiMmYiLCJzY3AiOjE3OTIsImNzaSI6IjE3MTYyMTQ4MTYiLCJleHAiOjE3MTYzMDEyMTYsInJnbiI6InVrIiwiYWNzU2NvcGUiOiJjaGF0LHZvaXAiLCJyZXNvdXJjZUlkIjoiZDgwMGVkNTMtNzNmZi00YzMyLWE1OTItMjhjYTRlYjliNzU4IiwicmVzb3VyY2VMb2NhdGlvbiI6InVrIiwiaWF0IjoxNzE2MjE0ODE2fQ.LEplJemXVSYJ2zjg-n5BvH3booMnTWVsAPkgP4ZDA4bi1RN4APbLuUCf6Ja_-crYa-9Y3DhfRRHwQjS_rjys_4U1jIaOEJGtulVxA-6ZJ1GxyujOBRo_gugekTa2eydUkPuFIWSFFCMFoKYEc1srSkX3iVZNpRuM8rlac5_jDp0BR_id4yeUipVCcqtUXYyslLjQD8q8gqOR3ENKKt22n-84SwRpN0C0hmgYJw4ZDvPEwvs2RFouQxtdA45RYHLkBqt_bFSwb5KgMIbE754q509PCGC9KXfxtgVF9CzRUOW6u9kWvOfiBxgBuOqAR1M-AW5toW6cXTn4Vo711ArX3w";
+
 
   /**
    * User identifier for local user.
@@ -61,17 +63,17 @@ function App() {
 
   return (
     <Stack
-      style={{ height: "100%", width: "100%", padding: "3rem" }}
+      style={{ height: "100%", width: "100%", paddingTop: "5rem", paddingBottom: "5rem" }}
       tokens={{ childrenGap: "1.5rem" }}
     >
       <Stack tokens={{ childrenGap: "1rem" }} style={{ margin: "auto" }}>
         <Stack
-          style={{ padding: "3rem" }}
+          style={{ padding: "0rem" }}
           horizontal
           tokens={{ childrenGap: "2rem" }}
         >
           <img
-            style={{ width: "30rem", height: "auto" }}
+            style={{ width: "25rem", height: "auto" }}
             src={logo}
             alt="logo"
           />
