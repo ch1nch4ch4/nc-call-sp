@@ -69,7 +69,7 @@ export const CallingWidgetComponent = (
 ): JSX.Element => {
   const { onRenderLogo, widgetAdapterArgs } = props;
 
-  const [widgetState, setWidgetState] = useState<"new" | "setup" | "inCall">(
+  const [widgetState, setWidgetState] = useState<"new" | "inCall">(
     "new"
   );
   const [displayName, setDisplayName] = useState<string>();
@@ -80,7 +80,12 @@ export const CallingWidgetComponent = (
   const callIdRef = useRef<string>();
 
   const theme = useTheme();
-
+  function resetForm(){
+    setWidgetState("new");
+    setAdapter(undefined);
+    setConsentToData(false);
+    setDisplayName(undefined);
+  }
   // add this before the React template
   const credential = useMemo(() => {
     try {
@@ -132,10 +137,7 @@ export const CallingWidgetComponent = (
         ) {
           return;
         }
-        setDisplayName(undefined);
-        setWidgetState("new");
-        setConsentToData(false);
-        setAdapter(undefined);
+        resetForm();
         adapter.dispose();
       });
 
@@ -153,7 +155,7 @@ export const CallingWidgetComponent = (
   }, [adapter]);
 
   /** widget template for when widget is open, put any fields here for user information desired */
-  if (widgetState === "setup") {
+  if (widgetState === "new") {
     return (
       <Stack
         styles={callingWidgetSetupContainerStyles(theme)}
@@ -163,10 +165,7 @@ export const CallingWidgetComponent = (
           styles={collapseButtonStyles}
           iconProps={{ iconName: "Dismiss" }}
           onClick={() => {
-            setDisplayName(undefined);
-            setConsentToData(false);
-            setUseLocalVideo(false);
-            setWidgetState("new");
+            resetForm();
           }}
         />
         <Stack tokens={{ childrenGap: "1rem" }} styles={logoContainerStyles}>
@@ -178,7 +177,7 @@ export const CallingWidgetComponent = (
           label={"Name"}
           required={true}
           placeholder={"Enter your name"}
-          onChange={(_, newValue) => {
+          onChange={(_: any, newValue: string) => {
             setDisplayName(newValue);
           }}
         />
