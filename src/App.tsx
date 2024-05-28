@@ -11,9 +11,10 @@ import {
   Text,
 } from "@fluentui/react";
 import { CallAdd20Regular, Dismiss20Regular } from "@fluentui/react-icons";
-import logo from "./nclogo.svg";
-
+import customerlogo from "./leonardo.svg";
+// import nclogo from "./nclogo.svg";
 import { CallingWidgetComponent } from "./components/CallingWidgetComponent";
+import poweredByNetcompany from '../../media/images/PoweredByNetcompany.svg';
 
 registerIcons({
   icons: { dismiss: <Dismiss20Regular />, callAdd: <CallAdd20Regular /> },
@@ -73,16 +74,22 @@ function App() {
         >
           <img
             style={{ width: "30rem", height: "auto" }}
-            src={logo}
-            alt="logo"
+            src={customerlogo}
+            alt="customerlogo"
           />
         </Stack>
-
-        <Text style={{textAlign: "center"}}>
+        <Stack>
+          <img 
+          style={{width: "10rem", height: "auto"}}
+          src={poweredByNetcompany}
+          alt="poweredByNetcompany"
+          />
+        </Stack>
+        <Text style={{textAlign: "center", color: "white"}}>
           Welcome to Netcompany Support
         </Text>
-        <Text style={{textAlign: "center"}}>
-          To connect to support immediatly, click the Call button below.
+        <Text style={{textAlign: "center", color: "white"}}>
+          To connect to support immediately, click the Call button below.
         </Text>
       </Stack>
       <Stack
@@ -96,8 +103,8 @@ function App() {
             return (
               <img
                 style={{ height: "4rem", width: "4rem", margin: "auto" }}
-                src={logo}
-                alt="logo"
+                src={customerlogo}
+                alt="customerlogo"
               />
             );
           }}
